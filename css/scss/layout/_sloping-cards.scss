@@ -1,0 +1,86 @@
+
+
+.shorten-url , .stats{
+  background:lighten($color:$Gray , $amount: 22) ;
+  padding: 1rem 0;
+}
+.shorten-url .container{
+  padding-bottom: 0;
+}
+.stats{
+  padding-top: 0;
+  .container{
+  padding-top: 0;
+  }
+}
+
+
+.stats{
+  p{
+    font-size:.85rem;
+  }
+  .benefits{
+    background: #f7f7f7;
+    position: relative;
+    padding: 1rem 0;
+    // &__item:not(:first-child)::before{
+    //   content: "";
+    //   position: absolute;
+    //   width:.5rem;
+    //   height:4.15rem;
+    //   bottom: 100%;
+    //   background: $Cyan;
+    //   z-index: -1;
+    // }
+    &__item{
+      position: relative; 
+      background: white;
+      margin: 4rem 0 1rem;
+      padding: 1rem;
+      box-shadow: 3px 3px 6px rgba($color: #000000, $alpha: .2);
+    }
+    &__icon-holder{
+      position: absolute; 
+      top:-2rem;
+      background-color:$Dark-Violet;
+      transform: translateX(-50%);
+      left: 50%;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      padding:16px;
+    }
+    &__headline{
+      max-width: 25rem;
+      margin: 2rem auto 0;
+    }
+  }
+  @include mQ_desktop {
+    .benefits{
+      height: 22.5rem;
+      @include grid (3);
+      &__item{
+        margin: 2rem 0 1rem;
+        align-self: center;
+        text-align: left;
+        &:nth-of-type(1){
+          align-self: start;
+          // &::before{
+          //   content: "";
+          //   position: relative;
+          //   width:90%;
+          //   height:.5rem;
+          //   // bottom: 50%;
+          //   background: $Cyan;
+          //   z-index: 2;
+          // }
+        }
+        &:nth-of-type(3){
+          align-self: end;
+        }
+      }      
+    }
+  }   
+
+}
+
